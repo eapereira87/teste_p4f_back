@@ -1,0 +1,215 @@
+[
+  {
+    "uri": "features/specs/teste_p4f_api.feature",
+    "id": "teste-p4f",
+    "keyword": "Funcionalidade",
+    "name": "Teste P4F",
+    "description": "",
+    "line": 4,
+    "comments": [
+      {
+        "value": "# encoding: utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "teste-p4f;criar-um-empregado",
+        "keyword": "Cenario",
+        "name": "Criar um empregado",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "um novo empregado",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4633384600
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao Post para o servico Create",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 932364600
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual a 200",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2783400
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o contrato deve ser valido \"post_create_schema.json\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8136000
+            }
+          }
+        ]
+      },
+      {
+        "id": "teste-p4f;consultar-um-empregado",
+        "keyword": "Cenario",
+        "name": "Consultar um empregado",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "um empregado cadastrado",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 745292200
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao Get para o servico Employee Id",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 761574500
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual a 200",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53400
+            }
+          }
+        ]
+      },
+      {
+        "id": "teste-p4f;consultar-todos-os-empregado",
+        "keyword": "Cenario",
+        "name": "Consultar todos os empregado",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao Get para o servico Employees",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 770404500
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual a 200",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48600
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "deve exibir os todos os empregados cadastrados",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6646200
+            }
+          }
+        ]
+      },
+      {
+        "id": "teste-p4f;excluir-um-empregado",
+        "keyword": "Cenario",
+        "name": "Excluir um empregado",
+        "description": "",
+        "line": 23,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "um empregado cadastrado",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675516800
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao DELETE para o servico Employee Id",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1451629400
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual a 200",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/teste_p4f_api_steps.rb:17"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: 200\n     got: 405\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/teste_p4f_api_steps.rb:18:in `\"o codigo de resposta HTTP deve ser igual a {int}\"'\nfeatures/specs/teste_p4f_api.feature:26:in `Entao o codigo de resposta HTTP deve ser igual a 200'",
+              "duration": 20444500
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
